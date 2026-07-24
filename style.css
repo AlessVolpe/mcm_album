@@ -166,3 +166,31 @@ h1, h2, h3, h4, h5, h6 {
     color: #333333;
     margin: 1rem 0;
 }
+
+/* ==========================================================================
+   POETRY & LYRICAL TEXT SECTION
+   ========================================================================== */
+.poem-container {
+    background-color: var(--light-swatch-bg);
+    border: 1px solid var(--light-border);
+    border-left: 3px solid var(--arterial-crimson);
+    border-radius: 4px;
+    padding: 1.25rem 1.5rem;
+}
+
+.poem-text {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--carbon-black);
+    white-space: pre-line; /* Preserves stanza spaces and line breaks automatically */
+}
+
+.poem-meta-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--subterranean-zinc);
+}
