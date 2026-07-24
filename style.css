@@ -1,0 +1,168 @@
+/* ==========================================================================
+   MASTER CONCEPTUAL MAP - STYLESHEET
+   Album: THAT WAS ALL A BURNING MEMORY
+   ========================================================================== */
+
+:root {
+    /* Exact Album Color Tokens */
+    --toxic-vermilion: #A34835;       /* Pantone 7581 C */
+    --arterial-crimson: #862633;      /* Pantone 202 C */
+    --carbon-black: #101820;          /* Pantone Black 6 C */
+    --concrete-slate: #888B8D;        /* Pantone Cool Gray 8 C */
+    --mineral-efflorescence: #D7D2CB; /* Pantone 7527 C */
+    --subterranean-zinc: #A1A8AC;     /* Pantone 7542 C */
+
+    /* Surface & Bootstrap Overrides */
+    --bs-body-bg: #FCFCFC;
+    --bs-body-color: #1A1A1A;
+    --light-card-bg: #FFFFFF;
+    --light-swatch-bg: #F8F9FA;
+    --light-border: #E2E8F0;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(16, 24, 32, 0.08), 0 1px 2px rgba(16, 24, 32, 0.12);
+    --shadow-md: 0 4px 12px rgba(16, 24, 32, 0.10), 0 2px 4px rgba(16, 24, 32, 0.06);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    line-height: 1.6;
+}
+
+.main-container {
+    max-width: 960px;
+}
+
+/* Headers & Section Titles */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--arterial-crimson);
+    font-weight: 700;
+}
+
+.main-header {
+    border-bottom: 3px solid var(--arterial-crimson);
+    padding-bottom: 0.75rem;
+}
+
+.section-title {
+    border-left: 4px solid var(--toxic-vermilion);
+    padding-left: 0.75rem;
+    margin-top: 2rem;
+    margin-bottom: 1.25rem;
+    color: var(--arterial-crimson);
+}
+
+.sub-title {
+    color: var(--toxic-vermilion);
+    font-weight: 600;
+}
+
+/* Badges & Accents */
+.badge-artist {
+    background-color: var(--toxic-vermilion);
+    color: #FFFFFF;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+/* Swatch Cards */
+.swatch-card {
+    background-color: var(--light-swatch-bg);
+    border: 1px solid var(--light-border);
+    border-radius: 6px;
+    padding: 0.85rem;
+    height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.swatch-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+    border-color: var(--subterranean-zinc);
+}
+
+.swatch-chip {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    margin-right: 10px;
+    vertical-align: middle;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.chip-vermilion { background-color: var(--toxic-vermilion); }
+.chip-crimson { background-color: var(--arterial-crimson); }
+.chip-black { background-color: var(--carbon-black); }
+.chip-slate { background-color: var(--concrete-slate); }
+.chip-efflorescence { background-color: var(--mineral-efflorescence); }
+.chip-zinc { background-color: var(--subterranean-zinc); }
+
+/* Material Cards */
+.card-custom {
+    background-color: var(--light-card-bg);
+    border: 1px solid var(--light-border);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 1.5rem;
+}
+
+/* Monospace & ASCII Boxes */
+.terminal-box {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, "Courier New", monospace;
+    background-color: var(--carbon-black);
+    color: var(--mineral-efflorescence);
+    padding: 1.25rem;
+    border-radius: 6px;
+    box-shadow: var(--shadow-md);
+    font-size: 0.825rem;
+    line-height: 1.25;
+    white-space: pre;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+.terminal-box code {
+    font-family: inherit;
+    color: inherit;
+    background: transparent;
+    padding: 0;
+}
+
+/* Tables */
+.table-custom {
+    box-shadow: var(--shadow-sm);
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: var(--light-card-bg);
+}
+
+.table-custom thead th {
+    background-color: var(--concrete-slate);
+    color: #FFFFFF;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    border: none;
+    padding: 12px 16px;
+}
+
+.table-custom td {
+    padding: 12px 16px;
+    border-color: var(--light-border);
+}
+
+/* Blockquotes */
+.blockquote-custom {
+    border-left: 4px solid var(--toxic-vermilion);
+    background-color: var(--light-swatch-bg);
+    padding: 1rem 1.25rem;
+    border-radius: 0 6px 6px 0;
+    font-style: italic;
+    color: #333333;
+    margin: 1rem 0;
+}
