@@ -15,7 +15,6 @@
 ## MODULE III: DECRYSTALLIZATION & SOMATIC HORROR
 - [x] **Giovanni Arpino** — *The Shadow of the Hills* (*L'ombra delle colline*) (Memory, exile, the alabaster bunker)
 - [ ] **Eugenio Montale** — *Cuttlefish Bones* (*Ossi di seppia*) (Decrystallization, calcified grief)
-- [ ] **Gottfried Benn** — *Morgue and Other Poems* (Clinical somatic horror, bodily breakdown)
 
 ## MODULE IV: MATERIALISM & THE FOURTH-PERSON SINGULAR
 - [ ] **Lucretius** — *On the Nature of Things* (*De Rerum Natura*) (Atomism, chaotic matter, clinamen)
