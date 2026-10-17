@@ -1,196 +1,122 @@
-/* ==========================================================================
-   MASTER CONCEPTUAL MAP - STYLESHEET
-   Album: THAT WAS ALL A BURNING MEMORY
-   ========================================================================== */
-
+/* False Memory Syndrome — concept document
+   Original vermilion / crimson / concrete palette, adapted for dark mode. */
 :root {
-    /* Exact Album Color Tokens */
-    --toxic-vermilion: #A34835;       /* Pantone 7581 C */
-    --arterial-crimson: #862633;      /* Pantone 202 C */
-    --carbon-black: #101820;          /* Pantone Black 6 C */
-    --concrete-slate: #888B8D;        /* Pantone Cool Gray 8 C */
-    --mineral-efflorescence: #D7D2CB; /* Pantone 7527 C */
-    --subterranean-zinc: #A1A8AC;     /* Pantone 7542 C */
+  color-scheme: dark;
+  --toxic-vermilion: #A34835;
+  --arterial-crimson: #862633;
+  --carbon-black: #101820;
+  --concrete-slate: #888B8D;
+  --mineral-efflorescence: #D7D2CB;
+  --subterranean-zinc: #A1A8AC;
 
-    /* Surface & Bootstrap Overrides */
-    --bs-body-bg: #FCFCFC;
-    --bs-body-color: #1A1A1A;
-    --light-card-bg: #FFFFFF;
-    --light-swatch-bg: #F8F9FA;
-    --light-border: #E2E8F0;
-
-    /* Shadows */
-    --shadow-sm: 0 1px 3px rgba(16, 24, 32, 0.08), 0 1px 2px rgba(16, 24, 32, 0.12);
-    --shadow-md: 0 4px 12px rgba(16, 24, 32, 0.10), 0 2px 4px rgba(16, 24, 32, 0.06);
+  --paper: #101820;
+  --ink: #D7D2CB;
+  --surface: #172129;
+  --surface-soft: #1B252E;
+  --border: #34414A;
+  --shadow: 0 2px 8px rgba(0,0,0,.22);
 }
 
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: var(--bs-body-bg);
-    color: var(--bs-body-color);
-    line-height: 1.6;
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
-.main-container {
-    max-width: 960px;
+main.document {
+  width: min(100% - 2rem, 860px);
+  margin: 0 auto;
+  padding: clamp(2.25rem, 6vw, 5.5rem) 0 6rem;
 }
 
-/* Headers & Section Titles */
-h1, h2, h3, h4, h5, h6 {
-    color: var(--arterial-crimson);
-    font-weight: 700;
+h1, h2, h3, h4 {
+  color: var(--mineral-efflorescence);
+  line-height: 1.25;
+  font-weight: 700;
+  text-wrap: pretty;
+}
+h1 {
+  font-size: clamp(2rem, 5vw, 3.15rem);
+  letter-spacing: -.035em;
+  line-height: 1.08;
+  padding-bottom: 1.1rem;
+  margin: 0 0 2.5rem;
+  border-bottom: 3px solid var(--arterial-crimson);
+}
+/* Section subtitles are typography-led with a horizontal rule, unlike lyric blockquotes. */
+h2 {
+  position: relative;
+  margin: 3.5rem 0 1.3rem;
+  padding: .6rem 0 .85rem;
+  border-left: 0;
+  border-bottom: 1px solid rgba(163,72,53,.68);
+  color: var(--mineral-efflorescence);
+  font-size: clamp(1.45rem, 3.4vw, 2rem);
+  letter-spacing: -.018em;
+}
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 3.5rem;
+  height: 3px;
+  background: var(--toxic-vermilion);
+}
+h3 { margin: 2.25rem 0 .85rem; font-size: 1.35rem; color: #C88778; }
+h4 { margin: 1.75rem 0 .75rem; font-size: 1.1rem; color: var(--subterranean-zinc); }
+
+p { margin: 0 0 1.15rem; }
+strong { color: #F2ECE6; }
+em { text-decoration-color: var(--subterranean-zinc); }
+a { color: #D98673; text-underline-offset: .18em; }
+a:hover { color: #F0B09F; }
+
+ul, ol { padding-left: 1.45rem; margin: .6rem 0 1.4rem; }
+li { padding-left: .15rem; margin: .3rem 0; }
+li::marker { color: var(--toxic-vermilion); }
+
+blockquote {
+  margin: 1.5rem 0 1.75rem;
+  padding: 1.15rem 1.35rem;
+  border-left: 4px solid var(--toxic-vermilion);
+  border-radius: 0 5px 5px 0;
+  background: var(--surface-soft);
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1px rgba(161,168,172,.08);
+}
+blockquote p { margin: 0; }
+blockquote p + p { margin-top: 1rem; }
+
+/* Keep lyric line breaks legible without enclosing the text in decorative cards. */
+blockquote { white-space: normal; }
+blockquote br { line-height: 1.9; }
+
+code {
+  padding: .12em .35em;
+  border-radius: 3px;
+  background: #26333D;
+  color: #E7B6A9;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: .9em;
+}
+hr { border: 0; border-top: 1px solid var(--border); margin: 2rem 0; }
+
+@media (max-width: 600px) {
+  body { font-size: 15px; line-height: 1.72; }
+  main.document { width: min(100% - 1.35rem, 860px); padding-top: 1.8rem; }
+  h1 { margin-bottom: 2rem; }
+  h2 { margin-top: 2.75rem; padding-bottom: .7rem; }
+  blockquote { padding: .95rem 1rem; margin-left: 0; margin-right: 0; }
 }
 
-.main-header {
-    border-bottom: 3px solid var(--arterial-crimson);
-    padding-bottom: 0.75rem;
-}
-
-.section-title {
-    border-left: 4px solid var(--toxic-vermilion);
-    padding-left: 0.75rem;
-    margin-top: 2rem;
-    margin-bottom: 1.25rem;
-    color: var(--arterial-crimson);
-}
-
-.sub-title {
-    color: var(--toxic-vermilion);
-    font-weight: 600;
-}
-
-/* Badges & Accents */
-.badge-artist {
-    background-color: var(--toxic-vermilion);
-    color: #FFFFFF;
-    font-size: 0.95rem;
-    font-weight: 600;
-    letter-spacing: 0.03em;
-}
-
-/* Swatch Cards */
-.swatch-card {
-    background-color: var(--light-swatch-bg);
-    border: 1px solid var(--light-border);
-    border-radius: 6px;
-    padding: 0.85rem;
-    height: 100%;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.swatch-card:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-sm);
-    border-color: var(--subterranean-zinc);
-}
-
-.swatch-chip {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    border-radius: 4px;
-    margin-right: 10px;
-    vertical-align: middle;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-}
-
-.chip-vermilion { background-color: var(--toxic-vermilion); }
-.chip-crimson { background-color: var(--arterial-crimson); }
-.chip-black { background-color: var(--carbon-black); }
-.chip-slate { background-color: var(--concrete-slate); }
-.chip-efflorescence { background-color: var(--mineral-efflorescence); }
-.chip-zinc { background-color: var(--subterranean-zinc); }
-
-/* Material Cards */
-.card-custom {
-    background-color: var(--light-card-bg);
-    border: 1px solid var(--light-border);
-    border-radius: 8px;
-    box-shadow: var(--shadow-sm);
-    margin-bottom: 1.5rem;
-}
-
-/* Monospace & ASCII Boxes */
-.terminal-box {
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, "Courier New", monospace;
-    background-color: var(--carbon-black);
-    color: var(--mineral-efflorescence);
-    padding: 1.25rem;
-    border-radius: 6px;
-    box-shadow: var(--shadow-md);
-    font-size: 0.825rem;
-    line-height: 1.25;
-    white-space: pre;
-    overflow-x: auto;
-    margin: 1rem 0;
-}
-
-.terminal-box code {
-    font-family: inherit;
-    color: inherit;
-    background: transparent;
-    padding: 0;
-}
-
-/* Tables */
-.table-custom {
-    box-shadow: var(--shadow-sm);
-    border-radius: 6px;
-    overflow: hidden;
-    background-color: var(--light-card-bg);
-}
-
-.table-custom thead th {
-    background-color: var(--concrete-slate);
-    color: #FFFFFF;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 0.04em;
-    border: none;
-    padding: 12px 16px;
-}
-
-.table-custom td {
-    padding: 12px 16px;
-    border-color: var(--light-border);
-}
-
-/* Blockquotes */
-.blockquote-custom {
-    border-left: 4px solid var(--toxic-vermilion);
-    background-color: var(--light-swatch-bg);
-    padding: 1rem 1.25rem;
-    border-radius: 0 6px 6px 0;
-    font-style: italic;
-    color: #333333;
-    margin: 1rem 0;
-}
-
-/* ==========================================================================
-   POETRY & LYRICAL TEXT SECTION
-   ========================================================================== */
-.poem-container {
-    background-color: var(--light-swatch-bg);
-    border: 1px solid var(--light-border);
-    border-left: 3px solid var(--arterial-crimson);
-    border-radius: 4px;
-    padding: 1.25rem 1.5rem;
-}
-
-.poem-text {
-    font-family: "Georgia", "Times New Roman", serif;
-    font-style: italic;
-    font-size: 0.95rem;
-    line-height: 1.8;
-    color: var(--carbon-black);
-    white-space: pre-line; /* Preserves stanza spaces and line breaks automatically */
-}
-
-.poem-meta-tag {
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--subterranean-zinc);
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }
