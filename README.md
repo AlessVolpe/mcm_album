@@ -1,6 +1,6 @@
 # WARNING
 
-This is a simple static, vibe-coded, page that I use for the conceptual map for my concept of a concept album. The map is AI generated but the content is all part of my imagination and creative process, the AI is used to put everything on the same level and simpify my future work with the album, coming TBD.
+This is a simple static, vibe-coded, page that I use for the conceptual map for my concept of a concept album. The concept is completely written by hand, reviewed and proof-read by me. Soon I'll be able to get it reviewed and edited by other beta readers.
 
 ## LICENSE
 
